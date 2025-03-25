@@ -4,7 +4,7 @@
         <section class="relative flex justify-center bg-tertiary-200 py-24 sm:p-48 md:py-64">
             <!-- Background image with opacity -->
             <div class="absolute inset-0 z-10 overflow-hidden">
-                <img src="/bg.jpg" alt="Background" class="w-full h-full object-cover opacity-25 scale-[1.2] origin-center" style="object-position: center;" />
+                <img src="/bg.jpg" alt="Background" class="w-full h-full object-cover opacity-25 scale-[1] origin-center" style="object-position: center;" />
             </div>
             
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
