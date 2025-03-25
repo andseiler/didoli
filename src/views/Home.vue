@@ -15,7 +15,7 @@
                   <span>Didoli</span>
                 </h1>
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
-                Für Architekten und Planer: E-Mails automatisch in den richtigen Projektordner
+                Für Architekten und Planer - E-Mails automatisch im richtigen Projektordner
               </h2>
               <p class="mb-24 text-primarycontrast-500 md:text-lg text-xl text-center">Für Outlook und alle anderen E-Mail Programme</p>
                 <div class="max-w-2xl w-full">
