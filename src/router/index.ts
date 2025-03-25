@@ -26,7 +26,19 @@ const router = createRouter({
       component: () => import('../components/Datenschutz.vue'),
       meta: { title: 'Datenschutz - Didoli' }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // If the user uses browser navigation buttons and a saved position exists
+    if (savedPosition) {
+      return savedPosition
+    }
+    
+    // Otherwise, scroll to top
+    return { 
+      top: 0,
+      behavior: 'instant' // Changed from 'smooth' to ensure immediate scrolling
+    }
+  }
 })
 
 // Navigation guard to update page title
