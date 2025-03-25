@@ -1,20 +1,26 @@
 <template>
     <main>
         <!-- Hero Section -->
-        <section class="relative flex justify-center bg-tertiary-200 py-12">
+        <section class="relative flex justify-center bg-tertiary-200 py-24 sm:p-48 md:py-64">
+            <!-- Background image with opacity -->
+            <div class="absolute inset-0 z-10 overflow-hidden">
+                <img src="/bg.jpg" alt="Background" class="w-full h-full object-cover opacity-25 scale-[1.2] origin-center" style="object-position: center;" />
+            </div>
+            
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
                 <h1
-                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-4 flex flex-col items-center gap-2">
+                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-12 
+                    flex flex-col items-center gap-2">
                   <img src="/didoli-base.svg" alt="Didoli Logo" class="h-20" />
                   <span>Didoli</span>
                 </h1>
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
                 Automatische E-Mail-Ablage für Architekten & Planer
               </h2>
-              <p class="mb-12 text-primarycontrast-500 md:text-lg text-xl">Für Outlook und alle anderen E-Mail Programme</p>
+              <p class="mb-24 text-primarycontrast-500 md:text-lg text-xl text-center">Für Outlook und alle anderen E-Mail Programme</p>
                 <div class="max-w-2xl w-full">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="flex-grow relative">
+                    <div class="flex flex-col lg:flex-row gap-4">
+                        <div class="flex-grow flex flex-col">
                             <input 
                                 v-model="heroEmail" 
                                 type="email" 
@@ -23,13 +29,15 @@
                                 :class="{'error': heroEmailError}"
                                 @focus="heroEmailError = false" 
                             />
-                            <span v-if="heroEmailError" class="text-red-500 text-sm absolute -bottom-6 left-0">Bitte gib eine gültige E-Mail-Adresse ein</span>
+                            <span v-if="heroEmailError" class="text-red-500 text-sm">Bitte gib eine gültige E-Mail-Adresse ein</span>
                         </div>
-                        <button class="gradient-button" @click="showBetaSignupModal(heroEmail, 'hero')">
-                            Jetzt für die Beta-Version anmelden
+                      <div>
+                        <button class="gradient-button w-full" @click="showBetaSignupModal(heroEmail, 'hero')">
+                          Jetzt für die Beta-Version anmelden
                         </button>
+                      </div>
                     </div>
-                    <p class="text-primarycontrast-400 mt-6 text-sm text-center">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
+                    <p class="text-primarycontrast-400 mt-4 text-sm text-center">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
                 </div>
             </div>
         </section>
@@ -283,7 +291,7 @@
                     
                     <div class="p-8">
                         <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-                            <div class="flex-grow relative">
+                            <div class="flex-grow flex flex-col">
                                 <input 
                                     v-model="ctaEmail" 
                                     type="email" 
@@ -292,13 +300,15 @@
                                     :class="{'error': ctaEmailError}"
                                     @focus="ctaEmailError = false" 
                                 />
-                                <span v-if="ctaEmailError" class="text-red-500 text-sm absolute -bottom-6 left-0">Bitte gib eine gültige E-Mail-Adresse ein</span>
+                                <span v-if="ctaEmailError" class="text-red-500 text-sm text-left">Bitte gib eine gültige E-Mail-Adresse ein</span>
                             </div>
-                            <button class="gradient-button" @click="showBetaSignupModal(ctaEmail, 'cta')">
-                                Kostenlos anmelden
+                          <div>
+                            <button class="gradient-button w-full" @click="showBetaSignupModal(ctaEmail, 'cta')">
+                              Kostenlos anmelden
                             </button>
+                          </div>
                         </div>
-                        <p class="text-textdark mt-6 text-sm">Kein Risiko, jederzeit kündbar. Keine Kreditkarte erforderlich.</p>
+                        <p class="text-textdark mt-4 text-sm">Kein Risiko, jederzeit kündbar. Keine Kreditkarte erforderlich.</p>
                         <div class="mt-6 text-center">
                             <button class="text-primary-500 hover:text-primary-600 font-medium cursor-pointer" @click="showContactModal">
                                 Mehr Informationen? Kontaktiere uns
