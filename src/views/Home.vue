@@ -4,9 +4,9 @@
         <section class="relative flex justify-center bg-tertiary-200 py-12">
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
                 <h1
-                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-4">
-                    Didoli <br>
-
+                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-4 flex flex-col items-center gap-2">
+                  <img src="/didoli-base.svg" alt="Didoli Logo" class="h-20" />
+                  <span>Didoli</span>
                 </h1>
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
                 Automatische E-Mail-Ablage für Architekten & Planer
