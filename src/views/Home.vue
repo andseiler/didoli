@@ -1,18 +1,17 @@
-# Create new file
 <template>
     <main>
         <!-- Hero Section -->
         <section class="relative flex justify-center bg-tertiary-200 py-12">
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
                 <h1
-                    class="fade-in text-4xl md:text-5xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
-                    Didoli – Automatische E-Mail-Ablage für Architekten & Planer
+                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-4">
+                    Didoli <br>
+
                 </h1>
-                <p class="text-xl md:text-2xl text-primarycontrast-400 text-center max-w-3xl mb-12 flex flex-col gap-4">
-                  <span>Schluss mit E-Mail-Chaos</span>
-                  <span>Didoli erkennt Projektmails automatisch, ordnet sie zentral und
-                  übersichtlich und spart dir wertvolle Zeit.</span>
-                </p>
+              <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
+                Automatische E-Mail-Ablage für Architekten & Planer
+              </h2>
+              <p class="mb-12 text-primarycontrast-500 md:text-lg text-xl">Für Outlook und alle anderen E-Mail Programme</p>
                 <div class="max-w-2xl w-full">
                     <div class="flex flex-col sm:flex-row gap-4">
                         <div class="flex-grow relative">
