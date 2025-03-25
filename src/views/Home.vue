@@ -15,7 +15,7 @@
                   <span>Didoli</span>
                 </h1>
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
-                Für Architekten und Planer - E-Mails automatisch im richtigen Projektordner
+                Für Architekten und Planer<br>E-Mails automatisch im richtigen Projektordner
               </h2>
               <p class="mb-24 text-primarycontrast-500 md:text-lg text-xl text-center">Für Outlook und alle anderen E-Mail Programme</p>
                 <div class="max-w-2xl w-full">
@@ -51,19 +51,19 @@
                         <div class="space-y-6 max-w-3xl mx-auto">
                             <div class="flex items-start space-x-4">
                                 <XCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">E-Mails manuell sortieren frisst deine Arbeitszeit.</p>
+                                <p class="text-lg text-textdark">E-Mails manuell sortieren frisst deine Arbeitszeit</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <XCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Wichtige Infos verstecken sich in einzelnen Postfächern.</p>
+                                <p class="text-lg text-textdark">Wichtige Infos verstecken sich in einzelnen Postfächern</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <XCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Projektkommunikation landet unübersichtlich verstreut.</p>
+                                <p class="text-lg text-textdark">Projektkommunikation landet unübersichtlich verstreut</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <XCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Rechtssichere Ablage von Projektmails ist kompliziert.</p>
+                                <p class="text-lg text-textdark">Rechtssichere Ablage von Projektmails ist kompliziert</p>
                             </div>
                         </div>
                     </div>
@@ -72,23 +72,23 @@
                         <div class="space-y-6 max-w-3xl mx-auto">
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Automatische Erkennung und Zuordnung von E-Mails zu Projekten.</p>
+                                <p class="text-lg text-textdark">Automatische Erkennung und Zuordnung von E-Mails zu Projekten</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Übersichtliche Projekt-Ablage direkt in deiner Cloud.</p>
+                                <p class="text-lg text-textdark">Übersichtliche Projekt-Ablage direkt in deiner Cloud</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Zentrale Kommunikation, sofort auffindbar für dein gesamtes Team.</p>
+                                <p class="text-lg text-textdark">Zentrale Kommunikation, sofort auffindbar für dein gesamtes Team</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Perfekt integriert in Outlook – funktioniert auch mit anderen E-Mail Programmen.</p>
+                                <p class="text-lg text-textdark">Perfekt integriert in Outlook – funktioniert auch mit anderen E-Mail Programmen</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Einfache, schnelle Einrichtung – keine technischen Vorkenntnisse nötig.</p>
+                                <p class="text-lg text-textdark">Einfache, schnelle Einrichtung – keine technischen Vorkenntnisse nötig</p>
                             </div>
                         </div>
                     </div>
