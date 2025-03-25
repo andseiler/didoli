@@ -1,0 +1,163 @@
+
+@import "tailwindcss";
+
+.gradient-button {
+  @apply font-bold
+}
+
+.gradient-button:not(.gradient-button-outline) {
+  transition: all 0.3s ease-in-out;
+  @apply cursor-pointer rounded-2xl bg-linear-to-r text-textbright p-4 flex gap-2 justify-center;
+}
+
+.gradient-button:not(.custom-color){
+  @apply from-primary-500 to-primary-600;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+}
+
+.gradient-button.gradient-button-outline {
+  transition: all 0.3s ease-in-out;
+  @apply cursor-pointer rounded-2xl bg-transparent border-2 text-primary-500 border-primary-500 p-4 flex gap-2 justify-center;
+}
+
+.form-group{
+  @apply w-full mb-4 flex flex-col
+}
+
+.form-label{
+  @apply block text-primary-500 font-bold mb-1
+}
+
+.form-input{
+  @apply rounded-sm text-textdark p-4 border shadow  focus:ring-2  focus:outline-none;
+}
+
+.form-input:not(.bright){
+  @apply text-textdark;
+}
+
+.form-input.bright{
+  @apply text-textbright;
+}
+
+.form-input:not(.error){
+  @apply border-primary-500 focus:border-primary-500 focus:ring-primary-500
+}
+
+.form-input.error{
+  @apply border-red-500 focus:border-red-500 focus:ring-red-500
+}
+
+.outline-button{
+  @apply cursor-pointer  flex gap-1   border-2 py-1 px-2 rounded-xl;
+}
+
+.outline-button:not(.dark){
+  @apply text-textbright border-textbright hover:text-primary-500 hover:border-primary-500;
+}
+
+.outline-button.dark{
+  @apply text-textdark border-textdark hover:text-primary-500 hover:border-primary-500;
+}
+
+.custom-radio {
+  @apply w-4 h-4 border-2 border-textdark rounded-full appearance-none;
+}
+
+.custom-radio:checked {
+  @apply bg-textdark border-textdark;
+}
+
+.custom-radio:focus {
+  @apply ring-0;
+}
+
+.contact-container{
+  @apply w-full p-4 bg-primarycontrast-500 py-8;
+}
+
+.contact-header{
+  @apply text-3xl font-extrabold text-textbright mb-8 text-center;
+}
+
+.contact-card{
+  @apply max-w-lg mx-auto bg-tertiary-200 rounded-lg shadow-lg p-8 flex flex-col items-center text-textdark;
+}
+
+@theme {
+  --color-textdark: #2f3235;
+  --color-textbright: #fff;
+  --color-textsemibright: #c5c7cb;
+}
+
+@theme {
+  --color-primarycontrast-50: #d7f2fe;
+  --color-primarycontrast-100: #afe5fd;
+  --color-primarycontrast-200: #5fcafc;
+  --color-primarycontrast-300: #0fb0fa;
+  --color-primarycontrast-400: #0480b9;
+  --color-primarycontrast-500: #024768;
+  --color-primarycontrast-600: #023b55;
+  --color-primarycontrast-700: #01293c;
+  --color-primarycontrast-800: #011c28;
+  --color-primarycontrast-900: #000e14;
+  --color-primarycontrast-950: #00070a;
+}
+
+@theme {
+  --color-tertiary-50: #fefcfb;
+  --color-tertiary-100: #fefcfb;
+  --color-tertiary-200: #fdf7f2;
+  --color-tertiary-300: #fcf4ee;
+  --color-tertiary-400: #faeee5;
+  --color-tertiary-500: #f9ebe0;
+  --color-tertiary-600: #eab790;
+  --color-tertiary-700: #db8543;
+  --color-tertiary-800: #9e561f;
+  --color-tertiary-900: #512c10;
+  --color-tertiary-950: #261507;
+}
+
+@theme {
+  --color-primary-50: #feefe7;
+  --color-primary-100: #fcdfcf;
+  --color-primary-200: #f9c2a4;
+  --color-primary-300: #f6a174;
+  --color-primary-400: #f48448;
+  --color-primary-500: #f16319;
+  --color-primary-600: #ca4f0c;
+  --color-primary-700: #953a09;
+  --color-primary-800: #652706;
+  --color-primary-900: #301303;
+  --color-primary-950: #180901;
+}
+
+@theme {
+  --color-gray-50:  #f2f3f5;
+  --color-gray-100: #e2e3e6;
+  --color-gray-200: #c5c7cb;
+  --color-gray-300: #a8aaaf;
+  --color-gray-400: #8a8d94;
+  --color-gray-500: #4d5057; /* Base Color */
+  --color-gray-600: #43464c;
+  --color-gray-700: #393c41;
+  --color-gray-800: #2f3235;
+  --color-gray-900: #25272a;
+}
+
+@theme {
+  --color-secondary-50: #dbfff7;
+  --color-secondary-100: #b8ffee;
+  --color-secondary-200: #6bffdc;
+  --color-secondary-300: #24ffcc;
+  --color-secondary-400: #00dba8;
+  --color-secondary-500: #00916e;
+  --color-secondary-600: #00755a;
+  --color-secondary-700: #005742;
+  --color-secondary-800: #00382b;
+  --color-secondary-900: #001f17;
+  --color-secondary-950: #000f0c;
+}
