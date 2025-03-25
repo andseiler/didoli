@@ -7,9 +7,10 @@
         <header class="bg-primarycontrast-500 sticky z-50 transition-all duration-300 shadow-xl"
             :class="{ 'shadow-xl': isScrolled, '-top-full': !showHeader, 'top-0': showHeader }">
             <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-screen-lg">
-                <router-link to="/" @click.prevent="scrollToSection('home')" class="inline-flex items-center gap-2 text-4xl sm:text-5xl font-normal text-primary-500 font-sniglet">
+                <router-link to="/" @click.prevent="scrollToSection('home')" class="inline-flex items-center
+                gap-2 text-4xl sm:text-5xl font-normal text-primary-500 font-didoli">
                     <img src="/didoli-base.svg" alt="Didoli Logo" class="h-8 sm:h-10" />
-                    Didoli
+                  <span class="pt-2">Didoli</span>
                 </router-link>
                 <nav class="flex gap-4">
                     <a href="#features" @click.prevent="scrollToSection('features')" class="outline-button inline-flex items-center gap-2">
@@ -115,15 +116,15 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
 <style lang="scss">
 @font-face {
-    font-family: 'Sniglet';
-    src: url('../assets/fonts/Sniglet-Regular.ttf') format('truetype');
+    font-family: 'FugazOne';
+    src: url('../assets/fonts/FugazOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-.font-sniglet {
-    font-family: 'Sniglet', cursive;
+.font-didoli {
+    font-family: 'FugazOne', cursive;
 }
 
 @keyframes fadeIn {

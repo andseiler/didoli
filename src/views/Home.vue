@@ -9,7 +9,7 @@
             
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
                 <h1
-                    class="fade-in text-6xl md:text-7xl font-sniglet text-primary-500 leading-tight text-center max-w-4xl mb-12 
+                    class="fade-in text-6xl md:text-7xl font-didoli text-primary-500 leading-tight text-center max-w-4xl mb-12 
                     flex flex-col items-center gap-2">
                   <img src="/didoli-base.svg" alt="Didoli Logo" class="h-20" />
                   <span>Didoli</span>
