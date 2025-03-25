@@ -7,25 +7,25 @@
         <header class="bg-primarycontrast-500 sticky z-50 transition-all duration-300 shadow-xl"
             :class="{ 'shadow-xl': isScrolled, '-top-full': !showHeader, 'top-0': showHeader }">
             <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-screen-lg">
-                <router-link to="/" class="text-xl sm:text-3xl font-bold text-primary-500">
+                <router-link to="/" @click.prevent="scrollToSection('home')" class="text-xl sm:text-3xl font-bold text-primary-500">
                     Didoli
                 </router-link>
                 <nav class="flex gap-4">
-                    <a href="#features" class="outline-button inline-flex items-center gap-2">
+                    <a href="#features" @click.prevent="scrollToSection('features')" class="outline-button inline-flex items-center gap-2">
                         <SparklesIcon class="h-5 w-5" />
-                        Features
+                        <span class="hidden sm:inline">Features</span>
                     </a>
-                    <a href="#prices" class="outline-button inline-flex items-center gap-2">
+                    <a href="#prices" @click.prevent="scrollToSection('prices')" class="outline-button inline-flex items-center gap-2">
                         <CurrencyEuroIcon class="h-5 w-5" />
-                        Preise
+                        <span class="hidden sm:inline">Preise</span>
                     </a>
-                    <a href="#faq" class="outline-button inline-flex items-center gap-2">
+                    <a href="#faq" @click.prevent="scrollToSection('faq')" class="outline-button inline-flex items-center gap-2">
                         <QuestionMarkCircleIcon class="h-5 w-5" />
-                        FAQ
+                        <span class="hidden sm:inline">FAQ</span>
                     </a>
                     <button @click="showContactModal" class="outline-button inline-flex items-center gap-2">
-                        <ChatBubbleOvalLeftIcon class="h-5 w-5" />
-                        Kontakt
+                        <ChatBubbleOvalLeftEllipsisIcon class="h-5 w-5" />
+                        <span class="hidden sm:inline">Kontakt</span>
                     </button>
                 </nav>
             </div>
@@ -46,8 +46,7 @@
 
         <!-- Contact Modal -->
         <ModalComponent 
-            :is-visible="isContactModalVisible" 
-            title="Kontakt" 
+            :is-visible="isContactModalVisible"
             @close="closeContactModal">
             <ContactModal @close="closeContactModal" />
         </ModalComponent>
@@ -56,10 +55,12 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { SparklesIcon, ChatBubbleBottomCenterTextIcon, CurrencyEuroIcon, QuestionMarkCircleIcon, ChatBubbleOvalLeftIcon } from '@heroicons/vue/24/outline';
+import { SparklesIcon, CurrencyEuroIcon, QuestionMarkCircleIcon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/vue/24/outline';
 import ModalComponent from './ModalComponent.vue';
 import ContactModal from './ContactModal.vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const isScrolled = ref(false);
 const showHeader = ref(true);
 const lastScrollPosition = ref(0);
@@ -90,6 +91,21 @@ const showContactModal = () => {
 
 const closeContactModal = () => {
     isContactModalVisible.value = false;
+};
+
+const scrollToSection = (id: string) => {
+  if (id === 'home' && window.location.pathname !== '/') {
+    // Navigate to home route if not already there
+    router.push('/');
+  } else {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth"});
+
+      //@ts-ignore
+      history.pushState(null, null, " ");
+    }
+  }
 };
 
 onMounted(() => window.addEventListener("scroll", handleScroll));

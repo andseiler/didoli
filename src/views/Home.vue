@@ -312,16 +312,14 @@
         
         <!-- Contact Modal -->
         <ModalComponent 
-            :is-visible="isContactModalVisible" 
-            title="Kontakt" 
+            :is-visible="isContactModalVisible"
             @close="closeContactModal">
             <ContactModal @close="closeContactModal" />
         </ModalComponent>
         
         <!-- Beta Signup Modal -->
         <ModalComponent 
-            :is-visible="isBetaSignupModalVisible" 
-            title="Beta-Anmeldung" 
+            :is-visible="isBetaSignupModalVisible"
             @close="closeBetaSignupModal">
             <BetaSignupModal 
                 :initial-email="betaSignupEmail" 

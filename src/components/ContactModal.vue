@@ -53,31 +53,3 @@ const copyEmailToClipboard = async () => {
 const emit = defineEmits(['close']);
 </script>
 
-<style scoped>
-.contact-container {
-  padding: 1.5rem;
-}
-
-.contact-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-primary-500);
-  margin-bottom: 1.5rem;
-}
-
-.contact-card {
-  background-color: white;
-  border-radius: 0.5rem;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: medium;
-  color: var(--color-textdark);
-}
-</style> 
