@@ -15,7 +15,7 @@
                   <span>Didoli</span>
                 </h1>
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
-                Automatische E-Mail-Ablage für Architekten & Planer
+                Für Architekten und Planer: E-Mails automatisch in den richtigen Projektordner
               </h2>
               <p class="mb-24 text-primarycontrast-500 md:text-lg text-xl text-center">Für Outlook und alle anderen E-Mail Programme</p>
                 <div class="max-w-2xl w-full">
@@ -84,7 +84,7 @@
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
-                                <p class="text-lg text-textdark">Perfekt integriert in Outlook – funktioniert aber mit anderen E-Mail Programmen.</p>
+                                <p class="text-lg text-textdark">Perfekt integriert in Outlook – funktioniert auch mit anderen E-Mail Programmen.</p>
                             </div>
                             <div class="flex items-start space-x-4">
                                 <CheckCircleIcon class="h-7 w-7 text-primary-500 flex-shrink-0" />
@@ -106,28 +106,28 @@
                             <CheckCircleIcon class="h-12 w-12 text-primary-500" />
                         </div>
                         <h3 class="font-semibold text-xl text-primary-500 mb-3">Automatische E-Mail-Zuordnung</h3>
-                        <p class="text-textdark">KI-basierte Zuordnung deiner Mails zu passenden Projekten</p>
+                        <p class="text-textdark">KI-basierte Zuordnung der Mails in deine Projektstruktur</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <div class="flex justify-center mb-4">
                             <EnvelopeIcon class="h-12 w-12 text-primary-500" />
                         </div>
                         <h3 class="font-semibold text-xl text-primary-500 mb-3">Perfekte Outlook-Integration</h3>
-                        <p class="text-textdark">Voll integriert als Outlook-Add-in – aber auch mit anderen E-Mail-Programmen möglich</p>
+                        <p class="text-textdark">Voll integriert als Outlook-Add-in – und auch mit anderen E-Mail-Programmen kompatibel</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <div class="flex justify-center mb-4">
                             <CloudIcon class="h-12 w-12 text-primary-500" />
                         </div>
                         <h3 class="font-semibold text-xl text-primary-500 mb-3">Cloud-Speicherung</h3>
-                        <p class="text-textdark">Sichere Ablage auf unseren EU Servern. Integration von Dropbox, OneDrive etc möglich.</p>
+                        <p class="text-textdark">Sichere Ablage auf unseren EU Servern. Integration von Dropbox, OneDrive ... möglich</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <div class="flex justify-center mb-4">
                             <MagnifyingGlassIcon class="h-12 w-12 text-primary-500" />
                         </div>
                         <h3 class="font-semibold text-xl text-primary-500 mb-3">Intuitive Volltextsuche</h3>
-                        <p class="text-textdark">Schnelles Finden von Projektinformationen in Sekunden</p>
+                        <p class="text-textdark">Schnelles Finden von Projektinformationen und wichtigen Dokumenten</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <div class="flex justify-center mb-4">
@@ -260,19 +260,19 @@
                 <div class="max-w-2xl mx-auto space-y-8">
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Wann startet die Beta-Phase?</h3>
-                        <p class="text-textdark">Die Beta-Phase startet in Kürze – melde dich an und du wirst rechtzeitig informiert.</p>
+                        <p class="text-textdark">Die Beta-Phase startet Mitte 2025 – melde dich an und du wirst rechtzeitig informiert</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Ist Didoli DSGVO-konform?</h3>
-                        <p class="text-textdark">Ja, deine Daten werden sicher und DSGVO-konform auf Servern in der EU gespeichert.</p>
+                        <p class="text-textdark">Ja, deine Daten werden sicher und DSGVO-konform auf Servern in der EU gespeichert</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Funktioniert Didoli nur mit Outlook?</h3>
-                        <p class="text-textdark">Nein, Didoli funktioniert optimal integriert mit Outlook, aber auch ohne Outlook per Web-Interface.</p>
+                        <p class="text-textdark">Nein, Didoli funktioniert optimal integriert mit Outlook und auch mit allen anderen Email-Programmen</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Brauche ich technisches Wissen zur Nutzung?</h3>
-                        <p class="text-textdark">Nein, Didoli ist intuitiv, unkompliziert und schnell eingerichtet – auch ohne IT-Kenntnisse.</p>
+                        <p class="text-textdark">Nein, Didoli ist intuitiv, unkompliziert und schnell eingerichtet – auch ohne IT-Kenntnisse</p>
                     </div>
                 </div>
             </div>
@@ -286,7 +286,7 @@
                 <div class="max-w-screen-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
                     <div class="bg-primary-500 p-6 text-white">
                         <h3 class="text-2xl font-bold mb-2">Jetzt Tester werden</h3>
-                        <p class="opacity-90">Limitierte Plätze verfügbar</p>
+                        <p class="opacity-90">Limitierte Plätze verfügbar (noch 82 von 100)</p>
                     </div>
                     
                     <div class="p-8">
@@ -308,7 +308,7 @@
                             </button>
                           </div>
                         </div>
-                        <p class="text-textdark mt-4 text-sm">Kein Risiko, jederzeit kündbar. Keine Kreditkarte erforderlich.</p>
+                        <p class="text-textdark mt-4 text-sm">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
                         <div class="mt-6 text-center">
                             <button class="text-primary-500 hover:text-primary-600 font-medium cursor-pointer" @click="showContactModal">
                                 Mehr Informationen? Kontaktiere uns
