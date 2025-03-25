@@ -37,7 +37,7 @@
 
         <footer class="bg-primarycontrast-500 text-textbright">
             <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center max-w-screen-xl">
-                <p class="text-sm">&copy; 2024 Didoli. Alle Rechte vorbehalten.</p>
+                <p class="text-sm">&copy; 2025 Didoli. Alle Rechte vorbehalten.</p>
                 <div class="space-x-4 text-sm">
                     <router-link to="/impressum" class="hover:text-primary-500">Impressum</router-link>
                     <router-link to="/datenschutz" class="hover:text-primary-500">Datenschutz</router-link>
