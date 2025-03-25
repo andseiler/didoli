@@ -14,13 +14,23 @@
                   übersichtlich und spart dir wertvolle Zeit.</span>
                 </p>
                 <div class="max-w-2xl w-full">
-                    <form class="flex flex-col sm:flex-row gap-4">
-                        <input type="email" placeholder="Deine E-Mail-Adresse" class="form-input flex-grow" />
-                        <button class="gradient-button">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-grow relative">
+                            <input 
+                                v-model="heroEmail" 
+                                type="email" 
+                                placeholder="Deine E-Mail-Adresse" 
+                                class="form-input w-full" 
+                                :class="{'error': heroEmailError}"
+                                @focus="heroEmailError = false" 
+                            />
+                            <span v-if="heroEmailError" class="text-red-500 text-sm absolute -bottom-6 left-0">Bitte gib eine gültige E-Mail-Adresse ein</span>
+                        </div>
+                        <button class="gradient-button" @click="showBetaSignupModal(heroEmail, 'hero')">
                             Jetzt für die Beta-Version anmelden
                         </button>
-                    </form>
-                    <p class="text-primarycontrast-400 mt-4 text-sm text-center">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
+                    </div>
+                    <p class="text-primarycontrast-400 mt-6 text-sm text-center">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
                 </div>
             </div>
         </section>
@@ -229,7 +239,7 @@
 
                 <div class="mt-12 flex justify-center flex-col items-center">
                     <p class="text-xl text-textbright">Individuelle Tarife auf Anfrage</p>
-                    <button class="gradient-button mt-4">
+                    <button class="gradient-button mt-4" @click="showContactModal">
                         Kontakt aufnehmen
                     </button>
                 </div>
@@ -273,17 +283,51 @@
                     </div>
                     
                     <div class="p-8">
-                        <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-                            <input type="email" placeholder="Deine E-Mail-Adresse" class="form-input flex-grow" />
-                            <button class="gradient-button">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+                            <div class="flex-grow relative">
+                                <input 
+                                    v-model="ctaEmail" 
+                                    type="email" 
+                                    placeholder="Deine E-Mail-Adresse" 
+                                    class="form-input w-full" 
+                                    :class="{'error': ctaEmailError}"
+                                    @focus="ctaEmailError = false" 
+                                />
+                                <span v-if="ctaEmailError" class="text-red-500 text-sm absolute -bottom-6 left-0">Bitte gib eine gültige E-Mail-Adresse ein</span>
+                            </div>
+                            <button class="gradient-button" @click="showBetaSignupModal(ctaEmail, 'cta')">
                                 Kostenlos anmelden
                             </button>
-                        </form>
-                        <p class="text-textdark mt-4 text-sm">Kein Risiko, jederzeit kündbar. Keine Kreditkarte erforderlich.</p>
+                        </div>
+                        <p class="text-textdark mt-6 text-sm">Kein Risiko, jederzeit kündbar. Keine Kreditkarte erforderlich.</p>
+                        <div class="mt-6 text-center">
+                            <button class="text-primary-500 hover:text-primary-600 font-medium cursor-pointer" @click="showContactModal">
+                                Mehr Informationen? Kontaktiere uns
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
+        
+        <!-- Contact Modal -->
+        <ModalComponent 
+            :is-visible="isContactModalVisible" 
+            title="Kontakt" 
+            @close="closeContactModal">
+            <ContactModal @close="closeContactModal" />
+        </ModalComponent>
+        
+        <!-- Beta Signup Modal -->
+        <ModalComponent 
+            :is-visible="isBetaSignupModalVisible" 
+            title="Beta-Anmeldung" 
+            @close="closeBetaSignupModal">
+            <BetaSignupModal 
+                :initial-email="betaSignupEmail" 
+                @close="closeBetaSignupModal" 
+            />
+        </ModalComponent>
 
         <!-- Footer content is in AppLayout.vue -->
     </main>
@@ -291,4 +335,68 @@
 
 <script setup lang="ts">
 import { XCircleIcon, CheckCircleIcon, EnvelopeIcon, CloudIcon, MagnifyingGlassIcon, RocketLaunchIcon, LockClosedIcon } from '@heroicons/vue/24/outline';
+import { ref } from 'vue';
+import ModalComponent from '../components/ModalComponent.vue';
+import ContactModal from '../components/ContactModal.vue';
+import BetaSignupModal from '../components/BetaSignupModal.vue';
+import { isValidEmail } from '../utils/validation';
+
+// Email input fields
+const heroEmail = ref("");
+const heroEmailError = ref(false);
+const ctaEmail = ref("");
+const ctaEmailError = ref(false);
+
+// Contact Modal state
+const isContactModalVisible = ref(false);
+
+const showContactModal = () => {
+  isContactModalVisible.value = true;
+};
+
+const closeContactModal = () => {
+  isContactModalVisible.value = false;
+};
+
+// Beta Signup Modal state
+const isBetaSignupModalVisible = ref(false);
+const betaSignupEmail = ref("");
+
+const showBetaSignupModal = (sourceEmail = "", source = "") => {
+  if (source === 'hero') {
+    if (!sourceEmail || !isValidEmail(sourceEmail)) {
+      heroEmailError.value = true;
+      return;
+    }
+    heroEmailError.value = false;
+  } else if (source === 'cta') {
+    if (!sourceEmail || !isValidEmail(sourceEmail)) {
+      ctaEmailError.value = true;
+      return;
+    }
+    ctaEmailError.value = false;
+  }
+  
+  // If an email is provided in the input field, use it
+  if (sourceEmail) {
+    betaSignupEmail.value = sourceEmail;
+  }
+  isBetaSignupModalVisible.value = true;
+};
+
+const clearEmailErrors = () => {
+  heroEmailError.value = false;
+  ctaEmailError.value = false;
+};
+
+const closeBetaSignupModal = () => {
+  isBetaSignupModalVisible.value = false;
+  // Clear all email fields
+  betaSignupEmail.value = "";
+  heroEmail.value = "";
+  ctaEmail.value = "";
+  // Clear any error states
+  heroEmailError.value = false;
+  ctaEmailError.value = false;
+};
 </script>

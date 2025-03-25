@@ -23,6 +23,10 @@
                         <QuestionMarkCircleIcon class="h-5 w-5" />
                         FAQ
                     </a>
+                    <button @click="showContactModal" class="outline-button inline-flex items-center gap-2">
+                        <ChatBubbleOvalLeftIcon class="h-5 w-5" />
+                        Kontakt
+                    </button>
                 </nav>
             </div>
         </header>
@@ -39,12 +43,22 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Contact Modal -->
+        <ModalComponent 
+            :is-visible="isContactModalVisible" 
+            title="Kontakt" 
+            @close="closeContactModal">
+            <ContactModal @close="closeContactModal" />
+        </ModalComponent>
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { SparklesIcon, ChatBubbleBottomCenterTextIcon, CurrencyEuroIcon, QuestionMarkCircleIcon } from '@heroicons/vue/24/outline';
+import { SparklesIcon, ChatBubbleBottomCenterTextIcon, CurrencyEuroIcon, QuestionMarkCircleIcon, ChatBubbleOvalLeftIcon } from '@heroicons/vue/24/outline';
+import ModalComponent from './ModalComponent.vue';
+import ContactModal from './ContactModal.vue';
 
 const isScrolled = ref(false);
 const showHeader = ref(true);
@@ -58,6 +72,9 @@ const props = defineProps({
     }
 });
 
+// Contact Modal state
+const isContactModalVisible = ref(false);
+
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 50;
     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -65,6 +82,14 @@ const handleScroll = () => {
     if (Math.abs(currentScrollPosition - lastScrollPosition.value) < scrollOffset) return;
     showHeader.value = currentScrollPosition < lastScrollPosition.value;
     lastScrollPosition.value = currentScrollPosition;
+};
+
+const showContactModal = () => {
+    isContactModalVisible.value = true;
+};
+
+const closeContactModal = () => {
+    isContactModalVisible.value = false;
 };
 
 onMounted(() => window.addEventListener("scroll", handleScroll));
