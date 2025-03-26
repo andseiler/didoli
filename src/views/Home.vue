@@ -1,7 +1,7 @@
 <template>
     <main>
         <!-- Hero Section -->
-        <section class="relative flex justify-center bg-tertiary-200 py-24 sm:p-48 md:py-64">
+        <section class="relative flex justify-center bg-tertiary-200 py-24">
             <!-- Background image with opacity -->
             <div class="absolute inset-0 z-10 overflow-hidden">
                 <img src="/bg.jpg" alt="Background" class="w-full h-full object-cover opacity-25 scale-[1.2] origin-center" style="object-position: center;" />
@@ -14,10 +14,13 @@
                   <img src="/didoli-base.svg" alt="Didoli Logo" class="h-20" />
                   <span>Didoli</span>
                 </h1>
-              <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-4">
+              <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-12">
                 Für Architekten und Planer<br>E-Mails automatisch im richtigen Projektordner
               </h2>
-              <p class="mb-24 text-primarycontrast-500 md:text-lg text-xl text-center">Für Outlook und alle anderen E-Mail Programme</p>
+              <p class="mb-12 text-primary-500 md:text-lg text-xl text-center bg-primarycontrast-500 p-4 rounded-xl shadow font-bold leading-loose">
+                Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten!
+                <br><span class="text-sm">Vertrag muss nach 6 Monaten aktiv verlängert werden</span>
+              </p>
                 <div class="max-w-2xl w-full">
                     <div class="flex flex-col lg:flex-row gap-4">
                         <div class="flex-grow flex flex-col">
@@ -37,7 +40,7 @@
                         </button>
                       </div>
                     </div>
-                    <p class="text-primarycontrast-400 mt-4 text-sm text-center">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
+                    <p class="text-primarycontrast-500 mt-4 text-sm text-center">Keine Verpflichtung, kein Risiko, keine Kosten – Testzeitraum endet automatisch</p>
                 </div>
             </div>
         </section>
@@ -260,7 +263,9 @@
                 <div class="max-w-2xl mx-auto space-y-8">
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Wann startet die Beta-Phase?</h3>
-                        <p class="text-textdark">Die Beta-Phase startet Mitte 2025 – melde dich an und du wirst rechtzeitig informiert</p>
+                        <p class="text-textdark">Die Beta-Phase startet am 01.06.2025 – melde dich an und du bekommst rechtzeitig deinen Zugang.
+                          Es entstehen keinerlei Kosten oder Verpflichtungen, der Vertrag kann nach 6 Monaten aktiv verlängert werden, ansonten
+                          löschen wir deine Daten.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-sm">
                         <h3 class="text-xl font-semibold text-primary-500 mb-3">Ist Didoli DSGVO-konform?</h3>
@@ -308,7 +313,7 @@
                             </button>
                           </div>
                         </div>
-                        <p class="text-textdark mt-4 text-sm">Kein Risiko, keine Kosten – Keine Kreditkarte erforderlich</p>
+                        <p class="text-textdark mt-4 text-sm">Keine Verpflichtung, kein Risiko, keine Kosten – Testzeitraum endet automatisch</p>
                         <div class="mt-6 text-center">
                             <button class="text-primary-500 hover:text-primary-600 font-medium cursor-pointer" @click="showContactModal">
                                 Mehr Informationen? Kontaktiere uns

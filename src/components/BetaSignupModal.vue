@@ -1,6 +1,12 @@
 <template>
   <div class="contact-container">
-    <div class="contact-header">Für Beta-Version anmelden</div>
+    <div class="contact-header">
+      Für Beta-Version anmelden
+      <div class="text-base mt-4">
+        Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten!
+        <br><span class="text-xs">Vertrag muss nach 6 Monaten aktiv verlängert werden</span>
+      </div>
+    </div>
     <div class="contact-card">
       <div class="w-full flex flex-col gap-4 p-6">
         <div class="form-group">
@@ -11,7 +17,7 @@
           <textarea rows="4" class="form-input w-full" v-model="message" placeholder="Willst du uns noch etwas mitteilen?"></textarea>
         </div>
         <button @click="submitForm" class="gradient-button">Jetzt anmelden</button>
-        <p class="text-center text-textdark text-sm">Kein Risiko, keine Kosten</p>
+        <p class="text-center text-textdark text-sm">Keine Verpflichtung, kein Risiko, keine Kosten – Testzeitraum endet automatisch</p>
         <p v-if="responseMessage" class="font-bold text-primary-500 text-center mt-4" :class="{'text-red-500': isError}">{{ responseMessage }}</p>
       </div>
     </div>
