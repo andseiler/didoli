@@ -17,7 +17,8 @@
               <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-12">
                 Für Architekten und Planer<br>E-Mails automatisch im richtigen Projektordner
               </h2>
-              <p class="mb-12 text-primary-500 md:text-lg text-xl text-center bg-primarycontrast-500 p-4 rounded-xl shadow font-bold leading-loose">
+              <p class="mb-12 text-primary-500 md:text-lg text-xl text-center bg-linear-to-r from-white to-white p-4
+              rounded-xl shadow-sm font-bold leading-loose">
                 Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten!
                 <br><span class="text-sm">Vertrag muss nach 6 Monaten aktiv verlängert werden</span>
               </p>
