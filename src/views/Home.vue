@@ -17,7 +17,7 @@
                 </h1>
               <div class="fade-in flex flex-col items-center text-center gap-2 mb-12 text-primarycontrast-400">
                 <span class="text-2xl md:text-3xl font-bold font-didoli uppercase [text-shadow:_0_2px_4px_rgb(242_148_0_/_0.2)]">Automatische E-Mail Ablage für Architekten und Planer</span>
-                <span class="text-xl md:text-xl font-bold [text-shadow:_0_2px_4px_rgb(242_148_0_/_0.2)]">Alle Mails des Teams zentral - Automatisch sortiert in eure Projektstruktur</span>
+                <span class="text-xl md:text-xl font-bold [text-shadow:_0_2px_4px_rgb(242_148_0_/_0.2)]">Alle Mails des Teams - sortiert und durchsuchbar, in eurer Projektstruktur</span>
               </div>
               <p class="mb-12 text-primary-500 text-center bg-tertiary-200
               rounded-xl font-bold flex flex-col gap-2 p-4 shadow-sm">
