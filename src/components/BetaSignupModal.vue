@@ -3,8 +3,8 @@
     <div class="contact-header">
       Für Beta-Version anmelden
       <div class="text-base mt-4">
-        Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten!
-        <br><span class="text-xs">Vertrag muss nach 6 Monaten aktiv verlängert werden</span>
+        Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten
+        <br><span class="text-xs">Kein automatischer Vertragsabschluss</span>
       </div>
     </div>
     <div class="contact-card">

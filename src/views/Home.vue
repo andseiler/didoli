@@ -296,7 +296,7 @@
                 <div class="max-w-screen-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
                     <div class="bg-primary-500 p-6 text-white">
                         <h3 class="text-2xl font-bold mb-2">Jetzt Tester werden</h3>
-                        <p class="opacity-90">Limitierte Plätze verfügbar (noch 82 von 100)</p>
+                        <p class="opacity-90">Beta Phase startet am 01.06.2025</p>
                     </div>
                     
                     <div class="p-8">
