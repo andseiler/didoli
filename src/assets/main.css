@@ -91,7 +91,7 @@
   --color-textdark: #2f3235;
   --color-textbright: #fff;
   --color-textsemibright: #c5c7cb;
-  --color-subheader:#023b55;
+  --color-subheader:#024768;
 }
 
 @theme {
@@ -135,6 +135,7 @@
   --color-primary-900: #301303;
   --color-primary-950: #180901;
 }
+
 
 @theme {
   --color-gray-50:  #f2f3f5;
