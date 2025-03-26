@@ -14,9 +14,10 @@
                   <img src="/didoli-base.svg" alt="Didoli Logo" class="h-20" />
                   <span>Didoli</span>
                 </h1>
-              <h2 class="fade-in text-xl md:text-2xl font-bold text-primarycontrast-500 leading-tight text-center max-w-4xl mb-12">
-                Für Architekten und Planer<br>E-Mails automatisch im richtigen Projektordner
-              </h2>
+              <div class="fade-in flex flex-col items-center text-center gap-2 mb-12 text-subheader">
+                <span class="text-2xl md:text-3xl font-bold  font-didoli uppercase">Automatische E-Mail Ablage für Architekten und Planer</span>
+                <span class="text-xl md:text-xl font-bold">Alle Mails des Teams zentral - Automatisch sortiert in eure Projektstruktur</span>
+              </div>
               <p class="mb-12 text-primary-500 text-center bg-white
               rounded-xl font-bold flex flex-col gap-2 p-4 shadow-sm">
                 <span class="text-lg md:text-xl">Beta Test startet am 01.06.2025</span>
@@ -200,7 +201,7 @@
                         
                         <div class="p-8">
                             <div class="flex justify-center items-baseline mb-8">
-                                <span class="text-4xl font-bold text-primary-500">29€</span>
+                                <span class="text-4xl font-bold text-primary-500">59€</span>
                                 <span class="text-xl text-gray-500 ml-2">Monat</span>
                             </div>
                             
@@ -230,7 +231,7 @@
                         
                         <div class="p-8">
                             <div class="flex justify-center items-baseline mb-8">
-                                <span class="text-4xl font-bold text-primary-500">79€</span>
+                                <span class="text-4xl font-bold text-primary-500">129€</span>
                                 <span class="text-xl text-gray-500 ml-2">Monat</span>
                             </div>
                             
@@ -241,7 +242,7 @@
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <CheckCircleIcon class="h-6 w-6 text-primary-500 flex-shrink-0" />
-                                    <span class="text-textdark">Bis zu 15 Nutzer</span>
+                                    <span class="text-textdark">Bis zu 25 Nutzer</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <CheckCircleIcon class="h-6 w-6 text-primary-500 flex-shrink-0" />
