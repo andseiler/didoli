@@ -5,7 +5,7 @@
             <!-- Background image with opacity -->
             <div class="absolute inset-0 z-10 overflow-hidden">
                 <img src="/bg.jpg" alt="Background" class="w-full h-full object-cover scale-[1.2] origin-center" style="object-position: center;" />
-                <div class="absolute inset-0 bg-[#f5f3f0] opacity-85"></div>
+                <div class="absolute inset-0 bg-[#E8E3DC] opacity-85"></div>
             </div>
             
             <div class="inset-0 flex flex-col items-center justify-center px-4 z-20">
