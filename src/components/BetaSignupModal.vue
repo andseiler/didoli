@@ -82,7 +82,7 @@ const submitForm = async () => {
       validate.value = false;
       setTimeout(() => {
         emit('close');
-      }, 2000);
+      }, 3000);
     }
   } catch (error) {
     responseMessage.value = "Fehler bei der Anmeldung!";

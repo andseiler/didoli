@@ -49,7 +49,7 @@ const submitForm = async () => {
       validate.value = false;
       setTimeout(() => {
         emit('close');
-      }, 1000);
+      }, 3000);
     }
   } catch (error) {
     responseMessage.value = "Fehler beim Senden!";
