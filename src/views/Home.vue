@@ -218,7 +218,7 @@
 
             <div class="p-8">
               <div class="flex justify-center items-baseline mb-8">
-                <span class="text-4xl font-bold text-primary-500">12€</span>
+                <span class="text-4xl font-bold text-primary-500">9€</span>
                 <span class="text-gray-500 ml-2 text-base">Monat / Benutzer</span>
               </div>
 
