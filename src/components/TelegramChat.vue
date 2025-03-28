@@ -9,7 +9,7 @@
       <textarea rows="6" class="form-input" v-model="message" :class="{'error': validate && !message}" placeholder="Deine Nachricht"></textarea>
       <span class="text-red-500 text-sm pl-1" v-if="validate && !message">Nachricht ist ein Pflichtfeld</span>
     </div>
-    <button @click="submitForm" class="gradient-button">Senden</button>
+    <LoadingButton :loading="isLoading" @click="submitForm">Senden</LoadingButton>
     <p v-if="responseMessage" class="font-bold text-primary-500" :class="{'text-red-500': isError}">{{ responseMessage }}</p>
   </div>
 </template>
@@ -18,12 +18,14 @@
 import { ref } from "vue";
 import { isValidEmail } from "../utils/validation";
 import { sendMessage } from "../utils/messaging";
+import LoadingButton from "./LoadingButton.vue";
 
 const email = ref("");
 const message = ref("");
 const responseMessage = ref("");
 const isError = ref(false);
 const validate = ref(false);
+const isLoading = ref(false);
 const emit = defineEmits(['close']);
 
 const validEmail = () => isValidEmail(email.value);
@@ -34,6 +36,7 @@ const submitForm = async () => {
     return;
   }
 
+  isLoading.value = true;
   try {
     const result = await sendMessage(email.value, message.value, 'contact');
     
@@ -51,6 +54,8 @@ const submitForm = async () => {
   } catch (error) {
     responseMessage.value = "Fehler beim Senden!";
     isError.value = true;
+  } finally {
+    isLoading.value = false;
   }
 
   setTimeout(() => {

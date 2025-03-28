@@ -16,7 +16,7 @@
         <div class="form-group">
           <textarea rows="4" class="form-input w-full" v-model="message" placeholder="Willst du uns noch etwas mitteilen?"></textarea>
         </div>
-        <button @click="submitForm" class="gradient-button">Jetzt anmelden</button>
+        <LoadingButton :loading="isLoading" @click="submitForm">Jetzt anmelden</LoadingButton>
         <p class="text-center text-textdark text-sm">Keine Verpflichtung, kein Risiko, keine Kosten – Testzeitraum endet automatisch</p>
         <p v-if="responseMessage" class="font-bold text-primary-500 text-center mt-4" :class="{'text-red-500': isError}">{{ responseMessage }}</p>
       </div>
@@ -28,6 +28,7 @@
 import { ref, watch } from "vue";
 import { isValidEmail } from "../utils/validation";
 import { sendMessage } from "../utils/messaging";
+import LoadingButton from "./LoadingButton.vue";
 
 const props = defineProps({
   initialEmail: {
@@ -41,6 +42,7 @@ const message = ref("");
 const responseMessage = ref("");
 const isError = ref(false);
 const validate = ref(false);
+const isLoading = ref(false);
 const emit = defineEmits(['close']);
 
 // Watch for changes to initialEmail prop
@@ -67,6 +69,7 @@ const submitForm = async () => {
     return;
   }
 
+  isLoading.value = true;
   try {
     const result = await sendMessage(email.value, message.value, 'beta-signup');
     
@@ -84,6 +87,8 @@ const submitForm = async () => {
   } catch (error) {
     responseMessage.value = "Fehler bei der Anmeldung!";
     isError.value = true;
+  } finally {
+    isLoading.value = false;
   }
 
   setTimeout(() => {
