@@ -1,9 +1,9 @@
 <template>
   <div class="contact-container">
     <div class="contact-header">
-      Für Beta-Version anmelden
+      Jetzt anmelden
       <div class="text-base mt-4">
-        Beta Test startet am 01.06.2025 <br> jetzt teilnehmen und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten
+        Produktstart am 01.06.2025 <br> jetzt anmelden und 6 Monate gratis nutzen <br>Keine Verpflichtung, keine Kosten
         <br><span class="text-xs">Kein automatischer Vertragsabschluss</span>
       </div>
     </div>
