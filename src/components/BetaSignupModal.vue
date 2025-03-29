@@ -30,6 +30,13 @@ import { isValidEmail } from "../utils/validation";
 import { sendMessage } from "../utils/messaging";
 import LoadingButton from "./LoadingButton.vue";
 
+// Typerweiterung für Window mit gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: any) => void;
+  }
+}
+
 const props = defineProps({
   initialEmail: {
     type: String,
@@ -80,6 +87,16 @@ const submitForm = async () => {
       email.value = "";
       message.value = "";
       validate.value = false;
+      
+      // Google Conversion Tracking aufrufen
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
+          'value': 1.0,
+          'currency': 'EUR'
+        });
+      }
+      
       setTimeout(() => {
         emit('close');
       }, 3000);
