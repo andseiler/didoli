@@ -68,11 +68,8 @@ watch(() => props.initialEmail, (newEmail) => {
 
 const validEmail = () => isValidEmail(email.value);
 
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
+function gtag_report_conversion() {
+  let callback = function () {
   };
   gtag('event', 'conversion', {
     'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
