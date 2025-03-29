@@ -68,6 +68,22 @@ watch(() => props.initialEmail, (newEmail) => {
 
 const validEmail = () => isValidEmail(email.value);
 
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
+    'value': 1.0,
+    'currency': 'EUR',
+    'event_callback': callback
+  });
+  return false;
+}
+
+
 const submitForm = async () => {
   if (!email.value || !validEmail()) {
     validate.value = true;
@@ -85,18 +101,8 @@ const submitForm = async () => {
       email.value = "";
       message.value = "";
       validate.value = false;
-      
-      // Google Conversion Tracking aufrufen
-      if (typeof gtag === 'function') {
-        console.log('juhu')
-        gtag('event', 'conversion', {
-          'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
-          'value': 1.0,
-          'currency': 'EUR'
-        });
-      }else{
-        console.log('grml')
-      }
+
+      gtag_report_conversion();
       
       setTimeout(() => {
         emit('close');
