@@ -88,11 +88,14 @@ const submitForm = async () => {
       
       // Google Conversion Tracking aufrufen
       if (typeof gtag === 'function') {
+        console.log('juhu')
         gtag('event', 'conversion', {
           'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
           'value': 1.0,
           'currency': 'EUR'
         });
+      }else{
+        console.log('grml')
       }
       
       setTimeout(() => {
