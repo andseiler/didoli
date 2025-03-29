@@ -30,11 +30,9 @@ import { isValidEmail } from "../utils/validation";
 import { sendMessage } from "../utils/messaging";
 import LoadingButton from "./LoadingButton.vue";
 
-// Typerweiterung für Window mit gtag
+// TypeScript-Definition für globale gtag-Funktion
 declare global {
-  interface Window {
-    gtag?: (command: string, action: string, params?: any) => void;
-  }
+  function gtag(command: string, action: string, params?: any): void;
 }
 
 const props = defineProps({
@@ -89,8 +87,8 @@ const submitForm = async () => {
       validate.value = false;
       
       // Google Conversion Tracking aufrufen
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'conversion', {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
           'send_to': 'AW-16905583254/YKkJCJLXiLAaEJb1mv0-',
           'value': 1.0,
           'currency': 'EUR'
